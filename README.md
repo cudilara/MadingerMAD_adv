@@ -2,7 +2,7 @@
 This repo is for Advanced App Development class labs and exams.
 
 ## Lab 1: 
-Create an app with a tab bar controller with at least two tabs. One tab should include a dependent picker that loads data from a plist, and another tab that opens another app. Your app should be adaptive for different size classes(this includes portrait and landscape orientations and different device sizes). Don't forget to include app icons and a launch screen as well.
+Create an app with a tab bar controller with at least three tabs. One tab should include a dependent picker that loads data from a plist, another tab should open another app, and the third tab should use an audio framework. Your app should be adaptive for different size classes(this includes portrait and landscape orientations and different device sizes). Don't forget to include app icons and a launch screen as well.
 
 ## Lab 2: 
 Create an app with navigation controllers and table views that let the user add and delete data. One of the table views should include a search bar. The data in the app should be persistent. Your app should be adaptive for different size classes and include app icons and a launch screen.
