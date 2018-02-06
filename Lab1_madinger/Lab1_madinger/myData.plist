@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Drax</key>
+	<array>
+		<string>cartoon</string>
+		<string>actor</string>
+		<string>angry</string>
+		<string>funny</string>
+	</array>
+	<key>Gamora</key>
+	<array>
+		<string>cartoon</string>
+		<string>actress</string>
+		<string>angry</string>
+		<string>cute</string>
+	</array>
+	<key>Big Groot</key>
+	<array>
+		<string>cartoon</string>
+		<string>actor</string>
+		<string>angry</string>
+	</array>
+	<key>Baby Groot</key>
+	<array>
+		<string>actor</string>
+		<string>angry</string>
+		<string>cute</string>
+	</array>
+	<key>Rocket</key>
+	<array>
+		<string>cartoon</string>
+		<string>angry</string>
+		<string>cute</string>
+	</array>
+	<key>Star-Lord</key>
+	<array>
+		<string>cartoon</string>
+		<string>actor</string>
+		<string>funny</string>
+		<string>cute</string>
+	</array>
+</dict>
+</plist>
