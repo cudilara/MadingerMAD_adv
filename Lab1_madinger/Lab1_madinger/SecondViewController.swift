@@ -9,13 +9,13 @@
 import UIKit
 class SecondViewController: UIViewController {
     @IBAction func gotomusic(_ sender: UIButton) {
-        if(UIApplication.shared.canOpenURL(URL(string: "spotify://")!)){
-            UIApplication.shared.open(URL(string: "spotify://")!, options: [:], completionHandler: nil)
+        if(UIApplication.shared.canOpenURL(URL(string: "Youtube://ToCB4ZnYYJs")!)){
+            UIApplication.shared.open(URL(string: "Youtube://ToCB4ZnYYJs")!, options: [:], completionHandler: nil)
         }else {
             if(UIApplication.shared.canOpenURL(URL(string: "music://")!)){
                 UIApplication.shared.open(URL(string: "music://")!, options: [:], completionHandler: nil)
             } else {
-                UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)")!, options: [:], completionHandler: nil)
+                UIApplication.shared.open(URL(string: "https://www.youtube.com/watch?v=vfWv7j4FIxQ")!, options: [:], completionHandler: nil)
             }
         }
     }

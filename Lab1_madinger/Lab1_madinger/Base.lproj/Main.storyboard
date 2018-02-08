@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--characters-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Lab1_madinger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Y5a-EE-UG4">
-                                <rect key="frame" x="27" y="56.5" width="320" height="554.5"/>
+                                <rect key="frame" x="173.5" y="-63" width="320" height="501"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Guardian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-nO-4AX">
                                         <rect key="frame" x="49" y="0.0" width="222.5" height="27.5"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTD-9h-jsn">
-                                        <rect key="frame" x="0.0" y="77.5" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="78" width="320" height="162"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -40,7 +40,7 @@
                                         </connections>
                                     </pickerView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guardiansGeneral" translatesAutoresizingMaskIntoConstraints="NO" id="n1R-2g-Jwc">
-                                        <rect key="frame" x="0.0" y="343.5" width="320" height="211"/>
+                                        <rect key="frame" x="0.0" y="290" width="320" height="211"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -52,7 +52,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="characters" image="woman" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="myImage" destination="n1R-2g-Jwc" id="YlH-4Z-Mwd"/>
                         <outlet property="myPicker" destination="iTD-9h-jsn" id="Clc-7H-fAB"/>
@@ -62,20 +62,19 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Third-->
+        <!--record-->
         <scene sceneID="6Gs-cB-xcO">
             <objects>
                 <viewController id="hlB-Rk-J7U" customClass="ThirdViewController" customModule="Lab1_madinger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDH-Tm-Iow">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-iJ-UtZ">
-                                <rect key="frame" x="132.5" y="198.5" width="110" height="270"/>
+                                <rect key="frame" x="300.5" y="52.5" width="66" height="270"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDF-2P-956">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="30"/>
                                         <state key="normal" title="Record">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -84,9 +83,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05E-x3-4uu">
-                                        <rect key="frame" x="0.0" y="80" width="110" height="30"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Play Big Groot">
+                                        <rect key="frame" x="0.0" y="80" width="66" height="30"/>
+                                        <state key="normal" title="Play Slow">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -94,9 +92,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2D-8v-cMh">
-                                        <rect key="frame" x="0.0" y="160" width="110" height="30"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Play Baby Groot">
+                                        <rect key="frame" x="0.0" y="160" width="66" height="30"/>
+                                        <state key="normal" title="Play Fast">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -104,8 +101,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrQ-Ve-LMH">
-                                        <rect key="frame" x="0.0" y="240" width="110" height="30"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="240" width="66" height="30"/>
                                         <state key="normal" title="Stop">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -123,7 +119,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tVs-KW-EqB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" id="Glv-EB-aXt"/>
+                    <tabBarItem key="tabBarItem" title="record" image="microphone-handheld" id="Glv-EB-aXt"/>
                     <connections>
                         <outlet property="playBabyButton" destination="c2D-8v-cMh" id="aty-93-Abv"/>
                         <outlet property="playBigButton" destination="05E-x3-4uu" id="Xgw-uR-fUR"/>
@@ -135,12 +131,12 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="747.9760119940031"/>
         </scene>
-        <!--Second-->
+        <!--listen-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Lab1_madinger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyQ-my-Nbs">
@@ -155,7 +151,7 @@
                         <color key="backgroundColor" red="0.23914897441864014" green="0.2560080885887146" blue="0.79612481594085693" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="listen" image="button-play" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +161,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,9 +178,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="button-play" width="30" height="30"/>
         <image name="guardians" width="128" height="128"/>
         <image name="guardiansGeneral" width="320" height="211"/>
-        <image name="second" width="30" height="30"/>
+        <image name="microphone-handheld" width="30" height="30"/>
+        <image name="woman" width="30" height="30"/>
     </resources>
 </document>

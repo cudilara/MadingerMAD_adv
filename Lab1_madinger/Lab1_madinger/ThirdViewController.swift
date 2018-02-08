@@ -39,10 +39,9 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
                 try audioPlayer = AVAudioPlayer(contentsOf:
                     (audioRecorder?.url)!)
                 audioPlayer!.delegate = self
-                audioPlayer?.enableRate = true //must check
+                audioPlayer?.enableRate = true
                 audioPlayer!.prepareToPlay() //prepares the audio player for playback by preloading its buffers
-                audioPlayer?.rate = 2.0 //must check
-                print("start playing")
+                audioPlayer?.rate = 0.5
                 audioPlayer!.play() //plays audio file
             } catch let error as NSError {
                 print("audioPlayer error: \(error.localizedDescription)")
@@ -59,10 +58,9 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
                 try audioPlayer = AVAudioPlayer(contentsOf:
                     (audioRecorder?.url)!)
                 audioPlayer!.delegate = self
-                audioPlayer?.enableRate = true //must check
+                audioPlayer?.enableRate = true
                 audioPlayer!.prepareToPlay() //prepares the audio player for playback by preloading its buffers
-                audioPlayer?.rate = 2.0 //must check
-                print("start playing")
+                audioPlayer?.rate = 3.0
                 audioPlayer!.play() //plays audio file
             } catch let error as NSError {
                 print("audioPlayer error: \(error.localizedDescription)")
@@ -76,10 +74,8 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         recordButton.isEnabled = true
         //stop recording or playing
         if audioRecorder?.isRecording == true {
-            print("stop recording")
             audioRecorder?.stop()
         } else {
-            print("stop playing")
             audioPlayer?.stop()
         }
     }
@@ -102,7 +98,6 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let docDir = dirPath[0] //documents directory
         let audioFileURL = docDir.appendingPathComponent(fileName)
-        print(audioFileURL)
         
         let audioSession = AVAudioSession.sharedInstance() //the shared audio session instance
         do {
@@ -124,7 +119,6 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
             //create the AVAudioRecorder instance
             audioRecorder = try AVAudioRecorder(url: audioFileURL, settings: settings)
             audioRecorder?.prepareToRecord()
-            print("audio recorder ready")
         } catch {
             print("audio recorder error: \(error.localizedDescription)")
         }
