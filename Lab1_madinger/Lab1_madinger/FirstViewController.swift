@@ -14,9 +14,11 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     let characterComponent = 0
     let optionsComponent = 1
-    var characterOptions = [String: [String]]()
-    var characters = [String]()
-    var options = [String]()
+    var wholePlist = [String: [String: String]]()
+    var characterKey = [String]()
+    var characterAttrDict = [String: String]()
+    var attrKey = [String]()
+    var image = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +26,11 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             let plistdecoder = PropertyListDecoder()
             do {
                 let data = try Data(contentsOf: pathURL)
-                characterOptions = try plistdecoder.decode([String: [String]].self, from: data)
-                characters = Array(characterOptions.keys)
-                options = characterOptions[characters[0]]! as [String]
+                wholePlist = try plistdecoder.decode([String: [String: String]].self, from: data)
+                characterKey = Array(wholePlist.keys)
+                characterAttrDict = wholePlist[characterKey[0]]! as [String: String]
+                attrKey = Array(characterAttrDict.keys)
+                image = characterAttrDict[attrKey[0]]! as String
             } catch {
                 print(error)
             }
@@ -39,29 +43,31 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == characterComponent {
-            return characters.count
+            return characterKey.count
         } else {
-            return options.count
+            return characterAttrDict.count
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == characterComponent {
-            return characters[row]
+            return characterKey[row]
         } else {
-            return options[row]
+            return attrKey[row]
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == characterComponent {
-            let selectedCharacter = characters[row]
-            options = characterOptions[selectedCharacter]!
+            let selectedCharacter = characterKey[row]
+            characterAttrDict = wholePlist[selectedCharacter]!
+            attrKey = Array(characterAttrDict.keys)
             myPicker.reloadComponent(optionsComponent)
             myPicker.selectRow(0, inComponent: optionsComponent, animated: true)
         }
         let characterRow = pickerView.selectedRow(inComponent: characterComponent)
         let optionsRow = pickerView.selectedRow(inComponent: optionsComponent)
+        myImage.image = UIImage(named: characterAttrDict[attrKey[optionsRow]]!)
     }
 
     override func didReceiveMemoryWarning() {

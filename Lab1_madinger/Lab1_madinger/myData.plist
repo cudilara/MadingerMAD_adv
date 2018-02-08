@@ -1,45 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Drax</key>
-	<array>
-		<string>cartoon</string>
-		<string>actor</string>
-		<string>angry</string>
-		<string>funny</string>
-	</array>
-	<key>Gamora</key>
-	<array>
-		<string>cartoon</string>
-		<string>actress</string>
-		<string>angry</string>
-		<string>cute</string>
-	</array>
-	<key>Big Groot</key>
-	<array>
-		<string>cartoon</string>
-		<string>actor</string>
-		<string>angry</string>
-	</array>
-	<key>Baby Groot</key>
-	<array>
-		<string>actor</string>
-		<string>angry</string>
-		<string>cute</string>
-	</array>
-	<key>Rocket</key>
-	<array>
-		<string>cartoon</string>
-		<string>angry</string>
-		<string>cute</string>
-	</array>
-	<key>Star-Lord</key>
-	<array>
-		<string>cartoon</string>
-		<string>actor</string>
-		<string>funny</string>
-		<string>cute</string>
-	</array>
+    <dict>
+    <key>Star-Lord</key>
+    <dict>
+        <key>cartoon</key>
+        <string>StarlordCartoon</string>
+        <key>actor</key>
+        <string>StarLordActor</string>
+        <key>angry</key>
+        <string>StarLordAngry</string>
+        <key>cute</key>
+        <string>StarLordCute</string>
+    </dict>
+    <key>Rocket</key>
+    <dict>
+        <key>cartoon</key>
+        <string>RocketCartoon</string>
+        <key>angry</key>
+        <string>RocketAngry</string>
+        <key>cute</key>
+        <string>RocketCute</string>
+    </dict>
+    <key>Gamora</key>
+    <dict>
+        <key>cartoon</key>
+        <string>GamoraCartoon</string>
+        <key>actress</key>
+        <string>GamoraActress</string>
+        <key>angry</key>
+        <string>GamoraAngry</string>
+        <key>cute</key>
+        <string>GamoraCute</string>
+    </dict>
+    <key>Drax</key>
+    <dict>
+        <key>cartoon</key>
+        <string>DraxCartoon</string>
+        <key>actor</key>
+        <string>DraxActor</string>
+        <key>angry</key>
+        <string>DraxAngry</string>
+        <key>funny</key>
+        <string>DraxFunny</string>
+    </dict>
+    <key>Big Groot</key>
+    <dict>
+        <key>cartoon</key>
+        <string>BigGrootCartoon</string>
+        <key>actor</key>
+        <string>GrootActor</string>
+        <key>angry</key>
+        <string>BigGrootAngry</string>
+    </dict>
+    <key>Baby Groot</key>
+    <dict>
+        <key>actor</key>
+        <string>GrootActor</string>
+        <key>angry</key>
+        <string>BabyGrootAngry</string>
+        <key>cute</key>
+        <string>BabyGrootCute</string>
+    </dict>
 </dict>
 </plist>

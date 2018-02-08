@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BB021FF202CB5F70009F02A /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB021FE202CB5F70009F02A /* ThirdViewController.swift */; };
+		6BB02202202CB7200009F02A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB02201202CB7200009F02A /* AVFoundation.framework */; };
 		6BDC2DE82023D450004355DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC2DE72023D450004355DB /* AppDelegate.swift */; };
 		6BDC2DEA2023D450004355DB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC2DE92023D450004355DB /* FirstViewController.swift */; };
 		6BDC2DEC2023D450004355DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC2DEB2023D450004355DB /* SecondViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BB021FE202CB5F70009F02A /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		6BB02201202CB7200009F02A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6BDC2DE42023D450004355DB /* Lab1_madinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1_madinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BDC2DE72023D450004355DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BDC2DE92023D450004355DB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB02202202CB7200009F02A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BB02200202CB7200009F02A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BB02201202CB7200009F02A /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6BDC2DDB2023D450004355DB = {
 			isa = PBXGroup;
 			children = (
 				6BDC2DE62023D450004355DB /* Lab1_madinger */,
 				6BDC2DE52023D450004355DB /* Products */,
+				6BB02200202CB7200009F02A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +75,7 @@
 				6BDC2DE72023D450004355DB /* AppDelegate.swift */,
 				6BDC2DE92023D450004355DB /* FirstViewController.swift */,
 				6BDC2DEB2023D450004355DB /* SecondViewController.swift */,
+				6BB021FE202CB5F70009F02A /* ThirdViewController.swift */,
 				6BDC2DED2023D450004355DB /* Main.storyboard */,
 				6BDC2DF02023D450004355DB /* Assets.xcassets */,
 				6BDC2DF22023D450004355DB /* LaunchScreen.storyboard */,
@@ -145,6 +160,7 @@
 			files = (
 				6BDC2DEC2023D450004355DB /* SecondViewController.swift in Sources */,
 				6BDC2DE82023D450004355DB /* AppDelegate.swift in Sources */,
+				6BB021FF202CB5F70009F02A /* ThirdViewController.swift in Sources */,
 				6BDC2DEA2023D450004355DB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
