@@ -11,7 +11,8 @@ import AVFoundation
 
 class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var playBigButton: UIButton!
+    @IBOutlet weak var playBabyButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
@@ -20,14 +21,15 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
     @IBAction func RecordAudio(_ sender: UIButton) {
         //if not already recording, start recording
         if audioRecorder?.isRecording == false{
-            playButton.isEnabled = false
+            playBigButton.isEnabled = false
+            playBabyButton.isEnabled = false
             stopButton.isEnabled = true
             audioRecorder?.delegate = self
             print("start recording")
             audioRecorder?.record()
         }
     }
-    @IBAction func PlayAudio(_ sender: UIButton) {
+    @IBAction func PlayBigAudio(_ sender: UIButton) {
         //if not recording play audio file
         if audioRecorder?.isRecording == false{
             stopButton.isEnabled = true
@@ -37,7 +39,29 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
                 try audioPlayer = AVAudioPlayer(contentsOf:
                     (audioRecorder?.url)!)
                 audioPlayer!.delegate = self
+                audioPlayer?.enableRate = true //must check
                 audioPlayer!.prepareToPlay() //prepares the audio player for playback by preloading its buffers
+                audioPlayer?.rate = 2.0 //must check
+                print("start playing")
+                audioPlayer!.play() //plays audio file
+            } catch let error as NSError {
+                print("audioPlayer error: \(error.localizedDescription)")
+            }
+        }
+    }
+    @IBAction func PlayBabyAudio(_ sender: UIButton) {
+        //if not recording play audio file
+        if audioRecorder?.isRecording == false{
+            stopButton.isEnabled = true
+            recordButton.isEnabled = false
+            
+            do {
+                try audioPlayer = AVAudioPlayer(contentsOf:
+                    (audioRecorder?.url)!)
+                audioPlayer!.delegate = self
+                audioPlayer?.enableRate = true //must check
+                audioPlayer!.prepareToPlay() //prepares the audio player for playback by preloading its buffers
+                audioPlayer?.rate = 2.0 //must check
                 print("start playing")
                 audioPlayer!.play() //plays audio file
             } catch let error as NSError {
@@ -47,7 +71,8 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
     }
     @IBAction func StopAudio(_ sender: UIButton) {
         stopButton.isEnabled = false
-        playButton.isEnabled = true
+        playBigButton.isEnabled = true
+        playBabyButton.isEnabled = true
         recordButton.isEnabled = true
         //stop recording or playing
         if audioRecorder?.isRecording == true {
@@ -69,7 +94,8 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
     override func viewDidLoad() {
         super.viewDidLoad()
         //disable buttons since no audio has been recorded
-        playButton.isEnabled = false;
+        playBigButton.isEnabled = false;
+        playBabyButton.isEnabled = false;
         stopButton.isEnabled = false;
         
         //get path for the audio file

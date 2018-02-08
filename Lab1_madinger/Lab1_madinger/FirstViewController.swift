@@ -65,7 +65,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             myPicker.reloadComponent(optionsComponent)
             myPicker.selectRow(0, inComponent: optionsComponent, animated: true)
         }
-        let characterRow = pickerView.selectedRow(inComponent: characterComponent)
+        _ = pickerView.selectedRow(inComponent: characterComponent)
         let optionsRow = pickerView.selectedRow(inComponent: optionsComponent)
         myImage.image = UIImage(named: characterAttrDict[attrKey[optionsRow]]!)
     }

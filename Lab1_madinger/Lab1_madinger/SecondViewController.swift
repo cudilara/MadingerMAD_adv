@@ -7,7 +7,6 @@
 //
 
 import UIKit
-// ??????where to find the names of these apps????
 class SecondViewController: UIViewController {
     @IBAction func gotomusic(_ sender: UIButton) {
         if(UIApplication.shared.canOpenURL(URL(string: "spotify://")!)){
