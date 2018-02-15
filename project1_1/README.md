@@ -15,3 +15,8 @@ There are not many apps teaching how to use Linux, and all of them are designed 
 My app will be different as it won't have much of a dark background if at all and it will have text suggesting what to do with the commands. Of course, it will have to have pictures, most probably of penguins and seals referring to Linux and MariaDB.
 ### Where will you get any content needed for your app? This could include text, formulas, whatever your app requires.
 For the app I will need text, explaining commands and suggesting what to do with them, images, and possibly sounds or music. For the text, I will use open source resources as a basis for my rewording. For the images I will use open source, Russian cartoon, and possibly general searched images with the references to them. If I need music, I will get it from Youtube APIs.
+
+### Notes about the pictures:
+* Main screens have "to delete" strings above the buttons. These will be deleted. The strings are there to allow for clicking during the prototype review.
+* directionsSub screen shows keyboard. This will not be in the final version. Accidently put edit text there.
+* Squares with the screen are placeholders for images.
