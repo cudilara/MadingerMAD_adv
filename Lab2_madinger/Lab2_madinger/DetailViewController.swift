@@ -18,17 +18,20 @@ class DetailViewController: UITableViewController {
         creaturesListDetail.creatures = Array(creaturesListDetail.creaturesData.keys)
         let chosenCreature = creaturesListDetail.creatures[selectedCreature]
         characters = creaturesListDetail.creaturesData[chosenCreature]! as [String]
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        
         let resultsController = SearchResultsController()
         resultsController.allwords = characters
         searchController = UISearchController(searchResultsController: resultsController)
+        
         searchController.searchBar.placeholder = "Enter a search word"
         searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = resultsController
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

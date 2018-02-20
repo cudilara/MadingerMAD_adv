@@ -2,7 +2,9 @@ import UIKit
 
 class ViewController: UITableViewController {
     var creaturesList = Creatures()
+    var words = [String]()
     let newDataFile = "userData.plist"
+    var searchController : UISearchController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +19,20 @@ class ViewController: UITableViewController {
                 //decodes the property list
                 creaturesList.creaturesData = try plistdecoder.decode([String: [String]].self, from: data)
                 creaturesList.creatures = Array(creaturesList.creaturesData.keys)
+                words = creaturesList.creatures
             } catch {
                 // handle error
                 print(error)
             }
         }
+        let resultsController = SearchResultsController()
+        resultsController.allwords = words
+        searchController = UISearchController(searchResultsController: resultsController)
         
+        searchController.searchBar.placeholder = "Enter a search word"
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = resultsController
         //enables large titles
         navigationController?.navigationBar.prefersLargeTitles = true
     }

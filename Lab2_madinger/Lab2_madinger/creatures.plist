@@ -5,12 +5,53 @@
         <key>Elves</key>
         <array>
             <string>Arwen</string>
+            <string>Celeborn</string>
             <string>Elrond</string>
+            <string>Galadriel</string>
+            <string>Glorfindel</string>
+            <string>Legolas</string>
+            <string>Thingol</string>
+            <string>Thranduil</string>
+        </array>
+        <key>Wizards</key>
+        <array>
+            <string>Gandalf</string>
+            <string>Radagast</string>
+            <string>Saruman</string>
+        </array>
+        <key>Humans</key>
+        <array>
+            <string>Aragorn</string>
+            <string>Boromir</string>
+            <string>Denethor</string>
+            <string>Eomer</string>
+            <string>Eowyn</string>
+            <string>Faramir</string>
+            <string>Saruman</string>
+            <string>Theoden</string>
+            <string>Wormtongue</string>
+        </array>
+        <key>Hobbits</key>
+        <array>
+            <string>Bilbo Baggins</string>
+            <string>Frodo Baggins</string>
+            <string>Samwise Gamgee</string>
+            <string>Meriadock Brandybuck</string>
+            <string>Peregrin Took</string>
+            <string>Barliman Butterbur</string>
         </array>
         <key>Dwarves</key>
         <array>
-            <string>Gimli</string>
             <string>Balin</string>
+            <string>Bofur</string>
+            <string>Bombur</string>
+            <string>Dwalin</string>
+            <string>Fili</string>
+            <string>Gloin</string>
+            <string>Gimli</string>
+            <string>Kili</string>
+            <string>Oin</string>
+            <string>Thorin</string>
         </array>
     </dict>
 </plist>

@@ -24,17 +24,19 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        let searchString = searchController.searchBar.text
-        filteredWords.removeAll(keepingCapacity: true)
-        if searchString?.isEmpty == false{
+        let searchString = searchController.searchBar.text //search string
+        filteredWords.removeAll(keepingCapacity: true) //removes all elements
+        if searchString?.isEmpty == false {
+            //closure that will be called for each word to see if it matches the search string
             let searchfilter: (String) -> Bool = { name in
+                //look for the search string as a substring of the word
                 let range = name.range(of: searchString!, options: .caseInsensitive)
-                return range != nil
-            }
+                return range != nil //returns true if the value matches and false if there’s no match
+            } //end closure
             let matches = allwords.filter(searchfilter)
             filteredWords.append(contentsOf: matches)
         }
-        tableView.reloadData()
+        tableView.reloadData() //reload table data with search results
     }
 
     override func didReceiveMemoryWarning() {
