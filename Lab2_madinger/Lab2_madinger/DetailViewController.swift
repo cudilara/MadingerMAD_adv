@@ -6,6 +6,11 @@
 //  Copyright © 2018 Dilara Madinger. All rights reserved.
 //
 
+
+// Cannot implement data persistence.
+// Data persistence component breaks at line 42.
+// Data file is written, but is not loaded properly.
+
 import UIKit
 
 class DetailViewController: UITableViewController {
@@ -13,8 +18,34 @@ class DetailViewController: UITableViewController {
     var selectedCreature = 0
     var creaturesListDetail = Creatures()
     var searchController : UISearchController!
+    let newDataFile = "userData.plist"
     
     override func viewWillAppear(_ animated: Bool) {
+        let pathURL:URL?
+        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docDir = dirPath[0] //documents directory
+        let dataFileURL = docDir.appendingPathComponent(newDataFile)
+        if FileManager.default.fileExists(atPath: dataFileURL.path){
+            pathURL = dataFileURL
+        } else {
+            // URL for our plist
+            pathURL = Bundle.main.url(forResource: "creatures", withExtension: "plist")
+        }
+        
+        //creates a property list decoder object
+        let plistdecoder = PropertyListDecoder()
+        do {
+            let data = try Data(contentsOf: pathURL!)
+            // This is where data persistence breaks!
+            // Gives warning:
+            // typeMismatch(Swift.Dictionary<Swift.String, Any>, Swift.DecodingError.Context(codingPath: [], debugDescription: "Expected to decode Dictionary<String, Any> but found an array instead.", underlyingError: nil))
+            creaturesListDetail.creaturesData = try plistdecoder.decode([String: [String]].self, from: data)
+            creaturesListDetail.creatures = Array(creaturesListDetail.creaturesData.keys)
+        } catch {
+            // handle error
+            print(error)
+        }
+        
         creaturesListDetail.creatures = Array(creaturesListDetail.creaturesData.keys)
         let chosenCreature = creaturesListDetail.creatures[selectedCreature]
         characters = creaturesListDetail.creaturesData[chosenCreature]! as [String]
@@ -27,10 +58,17 @@ class DetailViewController: UITableViewController {
         searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = resultsController
+        
+        let app = UIApplication.shared
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.applicationWillResignActive(_:)), name: NSNotification.Name.UIApplicationWillResignActive, object: app)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //For data persistence
+//        let app = UIApplication.shared
+//        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.applicationWillResignActive(_:)), name: NSNotification.Name.UIApplicationWillResignActive, object: app)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,6 +77,22 @@ class DetailViewController: UITableViewController {
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @objc func applicationWillResignActive(_ notification: NSNotification){
+        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docDir = dirPath[0]
+        print("docDir is  ", docDir)
+        let dataFileURL = docDir.appendingPathComponent(newDataFile)
+        print("dataFileURL is ", dataFileURL)
+        let plistencoder = PropertyListEncoder()
+        plistencoder.outputFormat = .xml
+        do{
+            let data = try plistencoder.encode(characters)
+            try data.write(to: dataFileURL)
+        } catch {
+            print(error)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
