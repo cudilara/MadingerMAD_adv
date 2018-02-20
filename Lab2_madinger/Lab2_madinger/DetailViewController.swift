@@ -33,18 +33,20 @@ class DetailViewController: UITableViewController {
         }
         
         //creates a property list decoder object
-        let plistdecoder = PropertyListDecoder()
-        do {
-            let data = try Data(contentsOf: pathURL!)
-            // This is where data persistence breaks!
-            // Gives warning:
-            // typeMismatch(Swift.Dictionary<Swift.String, Any>, Swift.DecodingError.Context(codingPath: [], debugDescription: "Expected to decode Dictionary<String, Any> but found an array instead.", underlyingError: nil))
-            creaturesListDetail.creaturesData = try plistdecoder.decode([String: [String]].self, from: data)
-            creaturesListDetail.creatures = Array(creaturesListDetail.creaturesData.keys)
-        } catch {
-            // handle error
-            print(error)
-        }
+//        let plistdecoder = PropertyListDecoder()
+//        do {
+//            let data = try Data(contentsOf: pathURL!)
+        
+//            // This is where data persistence breaks!
+//            // Gives warning:
+//            // typeMismatch(Swift.Dictionary<Swift.String, Any>, Swift.DecodingError.Context(codingPath: [], debugDescription: "Expected to decode Dictionary<String, Any> but found an array instead.", underlyingError: nil))
+        
+//            creaturesListDetail.creaturesData = try plistdecoder.decode([String: [String]].self, from: data)
+//            creaturesListDetail.creatures = Array(creaturesListDetail.creaturesData.keys)
+//        } catch {
+//            // handle error
+//            print(error)
+//        }
         
         creaturesListDetail.creatures = Array(creaturesListDetail.creaturesData.keys)
         let chosenCreature = creaturesListDetail.creatures[selectedCreature]
