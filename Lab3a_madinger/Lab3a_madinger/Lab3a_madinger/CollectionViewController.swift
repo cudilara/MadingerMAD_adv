@@ -17,7 +17,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 1...17{
+        for i in 1...26{
             myImages.append("i" + String(i))
         }
         
