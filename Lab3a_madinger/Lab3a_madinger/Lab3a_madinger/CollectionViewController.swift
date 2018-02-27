@@ -86,16 +86,19 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         var header: CollectionSupplementaryView?
         var footer: CollectionSupplementaryView?
-        if kind == UICollectionElementKindSectionHeader {
+        switch kind{
+        case UICollectionElementKindSectionHeader:
             header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as? CollectionSupplementaryView
             header?.headerLabel.text = "All we have to decide is what to do with the time that is given to us."
-        }
-        // Footer does not work
-        if kind == UICollectionElementKindSectionFooter{
+            return header!
+        case UICollectionElementKindSectionFooter:
             footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath) as? CollectionSupplementaryView
-            footer?.footerLabel.text = "footer."
+            footer?.footerLabel.text = "Not all those who wander are lost."
+            return footer!
+        default:
+            print("Failed to get header or footer.")
+            return header!
         }
-        return header!
     }
 
     // MARK: UICollectionViewDelegate
