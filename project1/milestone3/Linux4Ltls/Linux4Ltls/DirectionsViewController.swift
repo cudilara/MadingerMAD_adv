@@ -43,8 +43,12 @@ class DirectionsViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DirectionsDetailSegue" {
             let indexPath = tableView?.indexPath(for: sender as! UITableViewCell)
+            
+            let selectedDir = directionsList.directionsLabel[indexPath![1]]
+            directionsList.textImageDict = directionsList.fullDirectionsData[selectedDir]!
+            directionsList.dirText = Array(directionsList.textImageDict.keys)
             let detailVC = segue.destination as! DirectionsDetailViewController
-            detailVC.directionsName = directionsList.directionsLabel[(indexPath?.row)!]
+            detailVC.directionsTxt = directionsList.dirText[0]
         }
     }
 
