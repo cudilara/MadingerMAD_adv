@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+    <key>How do I get around?</key>
+    <dict>
+        <key>Getting around info</key>
+        <string>getAround</string>
+    </dict>
+    <key>I want to make my own folder</key>
+    <dict>
+        <key>Making my own folder</key>
+        <string>makeFolder</string>
+    </dict>
+    <key>Delete file or folder</key>
+    <dict>
+        <key>Deleting file or folder</key>
+        <string>deleteFolder</string>
+    </dict>
+    <key>Get more tools</key>
+    <dict>
+        <key>Getting tools</key>
+        <string>getTools</string>
+    </dict>
+    </dict>
+</plist>

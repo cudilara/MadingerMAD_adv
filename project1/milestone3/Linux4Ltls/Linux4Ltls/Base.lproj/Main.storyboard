@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -109,20 +110,20 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VrM-jC-e6B" kind="relationship" relationship="viewControllers" id="v8a-M5-0KO"/>
-                        <segue destination="APE-hn-r9D" kind="relationship" relationship="viewControllers" id="YGB-Yo-OF3"/>
                         <segue destination="tjn-fP-NcM" kind="relationship" relationship="viewControllers" id="rox-1M-Dz0"/>
+                        <segue destination="APE-hn-r9D" kind="relationship" relationship="viewControllers" id="YGB-Yo-OF3"/>
+                        <segue destination="VrM-jC-e6B" kind="relationship" relationship="viewControllers" id="v8a-M5-0KO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1362" y="-56"/>
         </scene>
-        <!--Item-->
+        <!--Network-->
         <scene sceneID="8h0-12-KCf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VrM-jC-e6B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tnK-ax-sw7"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VrM-jC-e6B" userLabel="Network" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Network" id="tnK-ax-sw7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HVW-3n-BZq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -140,17 +141,17 @@
         <!--Directions View Controller-->
         <scene sceneID="F8A-nY-5Pi">
             <objects>
-                <tableViewController id="zVF-ie-Ei7" userLabel="Directions View Controller" customClass="DirectionsViewController" customModule="Linux4Ltls" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Directions" id="zVF-ie-Ei7" userLabel="Directions View Controller" customClass="DirectionsViewController" customModule="Linux4Ltls" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ebv-it-u2a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDirections" textLabel="tUi-sw-hkQ" detailTextLabel="5As-9a-F6S" style="IBUITableViewCellStyleSubtitle" id="wIK-gQ-qbJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellDirections" textLabel="tUi-sw-hkQ" detailTextLabel="5As-9a-F6S" style="IBUITableViewCellStyleSubtitle" id="wIK-gQ-qbJ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wIK-gQ-qbJ" id="FMW-fh-Mn8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tUi-sw-hkQ">
@@ -169,6 +170,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="RUa-R5-MAh" kind="show" identifier="DirectionsDetailSegue" id="M9K-pv-0no"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -176,17 +180,48 @@
                             <outlet property="delegate" destination="zVF-ie-Ei7" id="DG8-uz-LYq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="juu-bj-Z0H"/>
+                    <navigationItem key="navigationItem" title="Directions" id="juu-bj-Z0H"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6d-nh-ZRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1452" y="-295"/>
         </scene>
-        <!--Item-->
+        <!--Directions Detail View Controller-->
+        <scene sceneID="C63-G8-STS">
+            <objects>
+                <viewController id="RUa-R5-MAh" customClass="DirectionsDetailViewController" customModule="Linux4Ltls" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yOy-XD-fsL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNO-yh-kFk">
+                                <rect key="frame" x="187" y="333.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZNO-yh-kFk" firstAttribute="centerY" secondItem="yOy-XD-fsL" secondAttribute="centerY" id="q6C-aT-c8E"/>
+                            <constraint firstItem="ZNO-yh-kFk" firstAttribute="centerX" secondItem="yOy-XD-fsL" secondAttribute="centerX" id="zLy-ET-0h0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8w5-Fm-RM5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4U9-c6-Xa1"/>
+                    <connections>
+                        <outlet property="sectionText" destination="ZNO-yh-kFk" id="8vw-wq-GUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hch-r6-vrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="-295"/>
+        </scene>
+        <!--My Computer-->
         <scene sceneID="SGQ-hU-qdq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="APE-hn-r9D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="43j-e0-pim"/>
+                    <tabBarItem key="tabBarItem" title="My Computer" id="43j-e0-pim"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IFV-F9-soN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -201,11 +236,11 @@
             </objects>
             <point key="canvasLocation" x="-89.599999999999994" y="424.58770614692656"/>
         </scene>
-        <!--Item-->
+        <!--Directions-->
         <scene sceneID="d6X-i7-aB9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjn-fP-NcM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HkD-s6-DYg"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjn-fP-NcM" userLabel="Directions" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Directions" id="HkD-s6-DYg" userLabel="Directions"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I8y-bM-owe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
