@@ -2,19 +2,72 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
-        <key>Follow the arrow</key>
+        <key>What is my address?</key>
         <dict>
-            <key>arrow info</key>
+            <key>
+            When you go online, your computer gets an IP address.
+            This is a number, by which others see you.
+            
+            Find your IP address! Type:
+            sudo ifconfig
+            
+            Find on the left side "wlan0"
+            Now look at the line next to it that says inet addr: and some numbers.
+            For example, inet addr: 192.64.10.3
+            </key>
             <string>confused</string>
         </dict>
-        <key>What is in the air</key>
+        <key>See your packets!</key>
         <dict>
-            <key>in air</key>
+            <key>
+            Want to see how your data travels?
+            
+            ping pbskids.org
+            
+            You will see lines appearing on your screen.
+            For example:
+            64 bytes from 52.85.83.132: icmp_seq=1 ttl=246 time=44.652 ms
+            
+            You can see the IP address of PBS Kids computer.
+            It is 52.85.83.132
+            
+            You can tell that their site is working, even without looking at your web browser.
+            
+            Keep Cntrl pressed and then press C. This stops the lines.
+            
+            You will see a line:
+            3 packets transmitted, 3 packets received, 0.0% packet loss
+            
+            This tells you that all the packets got through ok and nothing was lost.
+            </key>
             <string>confused</string>
         </dict>
-        <key>Who is there?</key>
+        <key>See exact way that data travels</key>
         <dict>
-            <key>who is there</key>
+            <key>
+            If you want to see exactly how data travels from your computer to some site, type:
+            
+            traceroute SITE_NAME
+            Let's do traceroute pbskids.org
+            
+            Now you see each step numbered 1, 2, 3, and so on.
+            
+            You can see what company owns the part of the way that your data travels.
+            
+            Remember, you can always stop by:
+            Keep Cntrl pressed and then press C. This stops the lines.
+            </key>
+            <string>confused</string>
+        </dict>
+        <key>Spy on someone's network</key>
+        <dict>
+            <key>
+            Type:
+            nmap NAME_OF_SITE
+            
+            This will show you more information about that site.
+            Look at ports. If there are many of these open, hackers can enter the system through these ports.
+            </key>
             <string>confused</string>
         </dict>
     </dict>

@@ -115,5 +115,19 @@
         </key>
         <string>confused</string>
     </dict>
+    <key>See what is in the file or folder</key>
+    <dict>
+        <key>
+        You can see what is inside the file...
+        Without opening it!
+        
+        cat NAME_OF_FILE
+        Cats are good for reading most files :)
+        
+        Seeing through the folder is easy:
+        ls NAME_OF_FOLDER
+        </key>
+        <string>confused</string>
+    </dict>
     </dict>
 </plist>

@@ -4,17 +4,103 @@
     <dict>
         <key>See all users</key>
         <dict>
-            <key>seeing all users</key>
+            <key>
+            You can see all users on your computer:
+            type word users and you will see the users
+            </key>
             <string>confused</string>
         </dict>
-        <key>See passwords</key>
+        <key>See last time someone was on your computer</key>
         <dict>
-            <key>seeing passwords</key>
+            <key>
+            If someone logged on your computer, you can see this.
+            
+            last -f /var/log/wtmp
+            </key>
             <string>confused</string>
         </dict>
-        <key>See history of the computer</key>
+        <key>All login sessions</key>
         <dict>
-            <key>history of computer</key>
+            <key>
+                You can see all logins by typing:
+                
+                cat /var/log/auth.log
+                
+                Are these hard to read?
+                Just for the beginning. Spies and special agents read such logs.
+                If you want to play special agents, try to read the log and tell about it.
+            </key>
+            <string>confused</string>
+        </dict>
+        <key>What type of computer do you have?</key>
+        <dict>
+            <key>
+                Your operating system is the brain that makes computer work.
+                Find out what type of brain your computer has.
+                
+                uname -a
+                
+                Want to learn a fancy word?
+                Kernel is what is at the center of your operating system.
+                Kernel starts your computer, makes sure it works well, and closes it correctly.
+                Which kernel do you have?
+                
+                uname -r
+            </key>
+            <string>confused</string>
+        </dict>
+        <key>Programs that start right away</key>
+        <dict>
+            <key>
+            Sometimes your computer might start slowly.
+            This happens because some of the programs are not running right.
+            Or you may have a virus in your computer.
+            
+            Check what programs start when your machine starts:
+            ls /etc/init.d
+            
+            When your computer is just fine, save this list.
+            If something happens, you can always see what programs don't belong.
+            Save the list by typing:
+            ls /etc/init.d > startingPrograms.txt
+            </key>
+            <string>confused</string>
+        </dict>
+        <key>See all users and passwords</key>
+        <dict>
+            <key>
+            Type cat /etc/shadow
+            The output will look something like this:
+            specialAgentKarina:$1$482c811da5d5b4bc6d497ffa98491e38:13064:0:9999:7:::
+            
+            Let's understand this line:
+            specialAgentKarina - name of the user
+            $1$482c811da5d5b4bc6d497ffa98491e38 - password that was made difficult
+            13064 - last time password was changed
+            0 - minimum amount of days between password changes
+            9999 - maximum amount of days to count password as real
+            7 - number of days before this user is reminded to change password
+            </key>
+            <string>confused</string>
+        </dict>
+        <key>Understanding passwords</key>
+        <dict>
+            <key>
+            Type cat /etc/shadow
+            The output will look something like this:
+            specialAgentKarina:$1$482c811da5d5b4bc6d497ffa98491e38:13064:0:9999:7:::
+            
+            Now we will look at password:
+            $1$482c811da5d5b4bc6d497ffa98491e38 - password that was made difficult
+            
+            The first 3 characters here $1$ tell that this password was remade with MD5.
+            Copy this password without the first 3 characters.
+            Go to Google or DuckDuckGo and search for md5 translator.
+            You will find several sites that allow you to put your password and they will give you what the real password is.
+            Our password is "password123".
+            However, if you make your password "foxWithEarsIsPretty", most websites will not be able to crack that password!
+            This is why you must make your password funny, long, and hard for others.
+            </key>
             <string>confused</string>
         </dict>
     </dict>
