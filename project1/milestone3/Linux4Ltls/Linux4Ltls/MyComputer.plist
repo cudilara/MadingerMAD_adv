@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>See all users</key>
+        <dict>
+            <key>seeing all users</key>
+            <string>confused</string>
+        </dict>
+        <key>See passwords</key>
+        <dict>
+            <key>seeing passwords</key>
+            <string>confused</string>
+        </dict>
+        <key>See history of the computer</key>
+        <dict>
+            <key>history of computer</key>
+            <string>confused</string>
+        </dict>
+    </dict>
+</plist>

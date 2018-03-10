@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B11798120544DCC00D1EB90 /* MyComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B11798020544DCC00D1EB90 /* MyComputer.swift */; };
+		6B1179832054502400D1EB90 /* MyComputerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1179822054502400D1EB90 /* MyComputerDetailViewController.swift */; };
+		6B117985205454BA00D1EB90 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B117984205454BA00D1EB90 /* Network.swift */; };
+		6B1179872054550300D1EB90 /* Network.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B1179862054550300D1EB90 /* Network.plist */; };
+		6B117989205455D600D1EB90 /* NetworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B117988205455D600D1EB90 /* NetworkDetailViewController.swift */; };
 		6B7CA35320519F4700DB4C3B /* DirectionsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7CA35220519F4700DB4C3B /* DirectionsDetailViewController.swift */; };
+		6B92FE2420543D07003149E2 /* MyComputer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B92FE2320543D07003149E2 /* MyComputer.plist */; };
 		6BB6E1BD2050BAA6002EC3F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB6E1BC2050BAA6002EC3F1 /* AppDelegate.swift */; };
 		6BB6E1C42050BAA6002EC3F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB6E1C22050BAA6002EC3F1 /* Main.storyboard */; };
 		6BB6E1C62050BAA6002EC3F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB6E1C52050BAA6002EC3F1 /* Assets.xcassets */; };
@@ -23,7 +29,13 @@
 /* Begin PBXFileReference section */
 		196402424BFB9E90C3FCA2F8 /* Pods_Linux4Ltls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Linux4Ltls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C310DB6FF315422006E001 /* Pods-Linux4Ltls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Linux4Ltls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Linux4Ltls/Pods-Linux4Ltls.debug.xcconfig"; sourceTree = "<group>"; };
+		6B11798020544DCC00D1EB90 /* MyComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComputer.swift; sourceTree = "<group>"; };
+		6B1179822054502400D1EB90 /* MyComputerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComputerDetailViewController.swift; sourceTree = "<group>"; };
+		6B117984205454BA00D1EB90 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		6B1179862054550300D1EB90 /* Network.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Network.plist; sourceTree = "<group>"; };
+		6B117988205455D600D1EB90 /* NetworkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDetailViewController.swift; sourceTree = "<group>"; };
 		6B7CA35220519F4700DB4C3B /* DirectionsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsDetailViewController.swift; sourceTree = "<group>"; };
+		6B92FE2320543D07003149E2 /* MyComputer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyComputer.plist; sourceTree = "<group>"; };
 		6BB6E1B92050BAA6002EC3F1 /* Linux4Ltls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linux4Ltls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB6E1BC2050BAA6002EC3F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BB6E1C32050BAA6002EC3F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,12 +96,18 @@
 				6BB6E1D220516B11002EC3F1 /* MyComputerViewController.swift */,
 				6BB6E1D020516829002EC3F1 /* NetworkViewController.swift */,
 				6BB6E1D820517052002EC3F1 /* Directions.swift */,
+				6B11798020544DCC00D1EB90 /* MyComputer.swift */,
+				6B117984205454BA00D1EB90 /* Network.swift */,
 				6B7CA35220519F4700DB4C3B /* DirectionsDetailViewController.swift */,
+				6B1179822054502400D1EB90 /* MyComputerDetailViewController.swift */,
+				6B117988205455D600D1EB90 /* NetworkDetailViewController.swift */,
 				6BB6E1C22050BAA6002EC3F1 /* Main.storyboard */,
 				6BB6E1C52050BAA6002EC3F1 /* Assets.xcassets */,
 				6BB6E1C72050BAA6002EC3F1 /* LaunchScreen.storyboard */,
 				6BB6E1CA2050BAA6002EC3F1 /* Info.plist */,
 				6BB6E1D620516DE1002EC3F1 /* Directions.plist */,
+				6B92FE2320543D07003149E2 /* MyComputer.plist */,
+				6B1179862054550300D1EB90 /* Network.plist */,
 			);
 			path = Linux4Ltls;
 			sourceTree = "<group>";
@@ -167,8 +185,10 @@
 			files = (
 				6BB6E1C92050BAA6002EC3F1 /* LaunchScreen.storyboard in Resources */,
 				6BB6E1C62050BAA6002EC3F1 /* Assets.xcassets in Resources */,
+				6B92FE2420543D07003149E2 /* MyComputer.plist in Resources */,
 				6BB6E1D720516DE1002EC3F1 /* Directions.plist in Resources */,
 				6BB6E1C42050BAA6002EC3F1 /* Main.storyboard in Resources */,
+				6B1179872054550300D1EB90 /* Network.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +260,11 @@
 				6BB6E1D520516BA3002EC3F1 /* DirectionsViewController.swift in Sources */,
 				6BB6E1D320516B11002EC3F1 /* MyComputerViewController.swift in Sources */,
 				6BB6E1D920517052002EC3F1 /* Directions.swift in Sources */,
+				6B117985205454BA00D1EB90 /* Network.swift in Sources */,
+				6B117989205455D600D1EB90 /* NetworkDetailViewController.swift in Sources */,
 				6B7CA35320519F4700DB4C3B /* DirectionsDetailViewController.swift in Sources */,
+				6B1179832054502400D1EB90 /* MyComputerDetailViewController.swift in Sources */,
+				6B11798120544DCC00D1EB90 /* MyComputer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

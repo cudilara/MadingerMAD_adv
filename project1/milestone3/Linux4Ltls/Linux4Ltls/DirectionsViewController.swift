@@ -1,11 +1,3 @@
-//
-//  DirectionsViewController.swift
-//  Linux4Ltls
-//
-//  Created by Dilara Madinger on 3/8/18.
-//  Copyright © 2018 Dilara Madinger. All rights reserved.
-//
-
 import UIKit
 
 class DirectionsViewController: UITableViewController {
@@ -47,8 +39,10 @@ class DirectionsViewController: UITableViewController {
             let selectedDir = directionsList.directionsLabel[indexPath![1]]
             directionsList.textImageDict = directionsList.fullDirectionsData[selectedDir]!
             directionsList.dirText = Array(directionsList.textImageDict.keys)
+            let selectedTxt = directionsList.dirText[0]
             let detailVC = segue.destination as! DirectionsDetailViewController
             detailVC.directionsTxt = directionsList.dirText[0]
+            detailVC.image = UIImage(named: directionsList.textImageDict[selectedTxt]!)
         }
     }
 
@@ -56,57 +50,4 @@ class DirectionsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -5,22 +5,22 @@
     <key>How do I get around?</key>
     <dict>
         <key>Getting around info</key>
-        <string>getAround</string>
+        <string>confused</string>
     </dict>
     <key>I want to make my own folder</key>
     <dict>
         <key>Making my own folder</key>
-        <string>makeFolder</string>
+        <string>confused</string>
     </dict>
     <key>Delete file or folder</key>
     <dict>
         <key>Deleting file or folder</key>
-        <string>deleteFolder</string>
+        <string>confused</string>
     </dict>
     <key>Get more tools</key>
     <dict>
         <key>Getting tools</key>
-        <string>getTools</string>
+        <string>confused</string>
     </dict>
     </dict>
 </plist>
