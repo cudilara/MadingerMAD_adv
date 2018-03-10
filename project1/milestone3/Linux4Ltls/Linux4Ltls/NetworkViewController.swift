@@ -32,15 +32,17 @@ class NetworkViewController: UITableViewController {
         return cell
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NetworkDetailSegue" {
             let indexPath = tableView?.indexPath(for: sender as! UITableViewCell)
-            
             let selectedDir = networkList.networkLabel[indexPath![1]]
             networkList.textImageDict = networkList.fullNetworkData[selectedDir]!
             networkList.networkText = Array(networkList.textImageDict.keys)
+            let selectedTxt = networkList.networkText[0]
             let detailVC = segue.destination as! NetworkDetailViewController
             detailVC.networkTxt = networkList.networkText[0]
+            detailVC.networkImage = UIImage(named: networkList.textImageDict[selectedTxt]!)
         }
     }
     
