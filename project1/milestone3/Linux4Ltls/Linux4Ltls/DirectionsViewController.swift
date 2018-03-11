@@ -43,6 +43,7 @@ class DirectionsViewController: UITableViewController {
             let detailVC = segue.destination as! DirectionsDetailViewController
             detailVC.directionsTxt = directionsList.dirText[0]
             detailVC.image = UIImage(named: directionsList.textImageDict[selectedTxt]!)
+            detailVC.mylabel = directionsList.directionsLabel[indexPath![1]]
         }
     }
 

@@ -43,6 +43,7 @@ class NetworkViewController: UITableViewController {
             let detailVC = segue.destination as! NetworkDetailViewController
             detailVC.networkTxt = networkList.networkText[0]
             detailVC.networkImage = UIImage(named: networkList.textImageDict[selectedTxt]!)
+            detailVC.mylabel = networkList.networkLabel[indexPath![1]]
         }
     }
     

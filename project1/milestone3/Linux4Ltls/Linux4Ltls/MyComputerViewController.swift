@@ -43,6 +43,8 @@ class MyComputerViewController: UITableViewController {
             let selectedTxt = mycomputerList.myComputerText[0]
             detailVC.myComputerTxt = mycomputerList.myComputerText[0]
             detailVC.mycompimage = UIImage(named: mycomputerList.textImageDict[selectedTxt]!)
+            detailVC.mylabel = mycomputerList.myComputerLabel[0]
+            detailVC.mylabel = mycomputerList.myComputerLabel[indexPath![1]]
         }
     }
     

@@ -297,7 +297,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8w5-Fm-RM5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4U9-c6-Xa1"/>
+                    <navigationItem key="navigationItem" id="bld-0l-cvf"/>
                     <connections>
                         <outlet property="myImage" destination="w0E-EX-ak7" id="JFG-Fb-yAd"/>
                         <outlet property="sectionText" destination="Nhn-WH-Jtz" id="Sik-pV-EzD"/>
