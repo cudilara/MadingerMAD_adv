@@ -25,7 +25,7 @@
         ls -a - shows even secret files.
         (Secret files star with a dot ;) )
         </key>
-        <string>confused</string>
+        <string>penguinMagician</string>
     </dict>
     <key>How do I go to a different folder?</key>
     <dict>
@@ -38,7 +38,7 @@
         
         cd .. - this takes you back where you came from.
         </key>
-        <string>confused</string>
+        <string>penguinFrench</string>
     </dict>
     <key>I want to make my own folder</key>
     <dict>
@@ -52,7 +52,7 @@
         pwd
         You are in folder FunnyNotes!
         </key>
-        <string>confused</string>
+        <string>penguinBuilder</string>
     </dict>
     <key>Delete file or folder</key>
     <dict>
@@ -69,7 +69,7 @@
         cd ..
         If you type ls the whole folder is gone!
         </key>
-        <string>confused</string>
+        <string>penguinPink</string>
     </dict>
     <key>Get more tools</key>
     <dict>
@@ -84,7 +84,7 @@
         This command will update your tools:
         sudo apt-get update
         </key>
-        <string>confused</string>
+        <string>penguinRacer</string>
     </dict>
     <key>Making a secret file ;)</key>
     <dict>
@@ -113,7 +113,7 @@
         
         This is the way to keep a secret diary.
         </key>
-        <string>confused</string>
+        <string>penguinBooks</string>
     </dict>
     <key>See what is in the file or folder</key>
     <dict>
@@ -127,7 +127,7 @@
         Seeing through the folder is easy:
         ls NAME_OF_FOLDER
         </key>
-        <string>confused</string>
+        <string>penguinCat</string>
     </dict>
     </dict>
 </plist>

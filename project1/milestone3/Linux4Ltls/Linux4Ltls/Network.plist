@@ -15,7 +15,7 @@
             Now look at the line next to it that says inet addr: and some numbers.
             For example, inet addr: 192.64.10.3
             </key>
-            <string>confused</string>
+            <string>penguinGandalf</string>
         </dict>
         <key>See your packets!</key>
         <dict>
@@ -40,7 +40,7 @@
             
             This tells you that all the packets got through ok and nothing was lost.
             </key>
-            <string>confused</string>
+            <string>penguinTut</string>
         </dict>
         <key>See exact way that data travels</key>
         <dict>
@@ -57,7 +57,7 @@
             Remember, you can always stop by:
             Keep Cntrl pressed and then press C. This stops the lines.
             </key>
-            <string>confused</string>
+            <string>penguinTribal</string>
         </dict>
         <key>Spy on someone's network</key>
         <dict>
@@ -68,7 +68,7 @@
             This will show you more information about that site.
             Look at ports. If there are many of these open, hackers can enter the system through these ports.
             </key>
-            <string>confused</string>
+            <string>penguinFairy</string>
         </dict>
     </dict>
 </plist>

@@ -8,7 +8,7 @@
             You can see all users on your computer:
             type word users and you will see the users
             </key>
-            <string>confused</string>
+            <string>penguinBritish</string>
         </dict>
         <key>See last time someone was on your computer</key>
         <dict>
@@ -17,7 +17,7 @@
             
             last -f /var/log/wtmp
             </key>
-            <string>confused</string>
+            <string>penguinAmerican</string>
         </dict>
         <key>All login sessions</key>
         <dict>
@@ -30,7 +30,7 @@
                 Just for the beginning. Spies and special agents read such logs.
                 If you want to play special agents, try to read the log and tell about it.
             </key>
-            <string>confused</string>
+            <string>penguinAviator</string>
         </dict>
         <key>What type of computer do you have?</key>
         <dict>
@@ -47,7 +47,7 @@
                 
                 uname -r
             </key>
-            <string>confused</string>
+            <string>penguinHawaii</string>
         </dict>
         <key>Programs that start right away</key>
         <dict>
@@ -64,7 +64,7 @@
             Save the list by typing:
             ls /etc/init.d > startingPrograms.txt
             </key>
-            <string>confused</string>
+            <string>penguinMoana</string>
         </dict>
         <key>See all users and passwords</key>
         <dict>
@@ -81,7 +81,7 @@
             9999 - maximum amount of days to count password as real
             7 - number of days before this user is reminded to change password
             </key>
-            <string>confused</string>
+            <string>penguinWinter</string>
         </dict>
         <key>Understanding passwords</key>
         <dict>
@@ -101,7 +101,7 @@
             However, if you make your password "foxWithEarsIsPretty", most websites will not be able to crack that password!
             This is why you must make your password funny, long, and hard for others.
             </key>
-            <string>confused</string>
+            <string>penguinTablet</string>
         </dict>
     </dict>
 </plist>
