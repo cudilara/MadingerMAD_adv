@@ -65,18 +65,19 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZa-3c-hg9">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.90521901845932007" green="0.97178429365158081" blue="0.90460473299026489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-jE-J0D">
                                         <rect key="frame" x="0.0" y="247" width="375" height="247"/>
+                                        <color key="backgroundColor" red="0.90521901845932007" green="0.97178429365158081" blue="0.90460473299026489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.90521901845932007" green="0.97178429365158081" blue="0.90460473299026489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TXV-By-idV" firstAttribute="bottom" secondItem="iF2-6c-4Db" secondAttribute="bottom" constant="60" id="4OZ-Wd-6At"/>
                             <constraint firstItem="TXV-By-idV" firstAttribute="trailing" secondItem="iF2-6c-4Db" secondAttribute="trailing" id="TWH-e2-To3"/>
@@ -102,6 +103,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97153455018997192" green="0.92842423915863037" blue="0.90265226364135742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97153455018997192" green="0.92842423915863037" blue="0.90265226364135742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellNetwork" textLabel="afC-eQ-ZrK" style="IBUITableViewCellStyleDefault" id="Uvh-5U-YJZ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -119,7 +121,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.94955641031265259" green="0.84426385164260864" blue="0.78869527578353882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97153455018997192" green="0.92842423915863037" blue="0.90265226364135742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="A1K-5V-QlB" kind="show" identifier="NetworkDetailSegue" id="tcN-DT-WI9"/>
                                 </connections>
@@ -149,13 +151,14 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vg-WT-Fmv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.97153455018997192" green="0.92842423915863037" blue="0.90265226364135742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omk-bu-HDZ">
                                         <rect key="frame" x="0.0" y="247" width="375" height="247"/>
+                                        <color key="backgroundColor" red="0.97153455018997192" green="0.92842423915863037" blue="0.90265226364135742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -170,7 +173,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97153455018997192" green="0.92842423915863037" blue="0.90265226364135742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OkW-kc-mc4" firstAttribute="leading" secondItem="LzM-o6-qiz" secondAttribute="leading" id="Lu1-Go-hqN"/>
                             <constraint firstItem="OkW-kc-mc4" firstAttribute="top" secondItem="LzM-o6-qiz" secondAttribute="top" id="Ob6-YH-tVk"/>
@@ -281,17 +284,19 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="test" translatesAutoresizingMaskIntoConstraints="NO" id="Nhn-WH-Jtz">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="271.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.90214872360229492" green="0.90482693910598755" blue="0.97454410791397095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confused" translatesAutoresizingMaskIntoConstraints="NO" id="w0E-EX-ak7">
                                         <rect key="frame" x="0.0" y="271.5" width="375" height="271.5"/>
+                                        <color key="backgroundColor" red="0.90214872360229492" green="0.90482693910598755" blue="0.97454410791397095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.90214872360229492" green="0.90482693910598755" blue="0.97454410791397095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.90214872360229492" green="0.90482693910598755" blue="0.97454410791397095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1xd-c3-dob" secondAttribute="bottom" constant="60" id="33M-OX-W8A"/>
                             <constraint firstItem="1xd-c3-dob" firstAttribute="top" secondItem="8w5-Fm-RM5" secondAttribute="top" id="gAD-mX-12c"/>
