@@ -34,6 +34,7 @@
 		6B117984205454BA00D1EB90 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		6B1179862054550300D1EB90 /* Network.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Network.plist; sourceTree = "<group>"; };
 		6B117988205455D600D1EB90 /* NetworkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDetailViewController.swift; sourceTree = "<group>"; };
+		6B11798A205813CC00D1EB90 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6B7CA35220519F4700DB4C3B /* DirectionsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsDetailViewController.swift; sourceTree = "<group>"; };
 		6B92FE2320543D07003149E2 /* MyComputer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyComputer.plist; sourceTree = "<group>"; };
 		6BB6E1B92050BAA6002EC3F1 /* Linux4Ltls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linux4Ltls.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +109,7 @@
 				6BB6E1D620516DE1002EC3F1 /* Directions.plist */,
 				6B92FE2320543D07003149E2 /* MyComputer.plist */,
 				6B1179862054550300D1EB90 /* Network.plist */,
+				6B11798A205813CC00D1EB90 /* README.md */,
 			);
 			path = Linux4Ltls;
 			sourceTree = "<group>";
