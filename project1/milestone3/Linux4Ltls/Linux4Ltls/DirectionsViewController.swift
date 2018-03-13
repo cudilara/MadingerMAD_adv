@@ -8,7 +8,6 @@ class DirectionsViewController: UITableViewController {
         super.viewDidLoad()
         if let pathDirURL = Bundle.main.url(forResource: "Directions", withExtension: "plist"){
             let plistdecoder = PropertyListDecoder()
-            self.navigationItem.rightBarButtonItem=self.editButtonItem
             do {
                 let data = try Data(contentsOf: pathDirURL)
                 directionsList.fullDirectionsData = try plistdecoder.decode([String: [String: String]].self, from: data)
