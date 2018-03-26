@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05283FC879C55F1D1954E30F /* Pods_Lab5_madinger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36834D33BA422875B30F2D68 /* Pods_Lab5_madinger.framework */; };
+		3FBCDB2220693746008E8CDB /* TripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCDB2120693746008E8CDB /* TripsTableViewController.swift */; };
+		3FBCDB2420693942008E8CDB /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCDB2320693942008E8CDB /* Trips.swift */; };
+		3FBCDB2620693FD0008E8CDB /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCDB2520693FD0008E8CDB /* AddTripViewController.swift */; };
 		6BF25FD9205B382800CAF180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF25FD8205B382800CAF180 /* AppDelegate.swift */; };
-		6BF25FDB205B382800CAF180 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF25FDA205B382800CAF180 /* ViewController.swift */; };
 		6BF25FDE205B382800CAF180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF25FDC205B382800CAF180 /* Main.storyboard */; };
 		6BF25FE0205B382800CAF180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF25FDF205B382800CAF180 /* Assets.xcassets */; };
 		6BF25FE3205B382800CAF180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF25FE1205B382800CAF180 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36834D33BA422875B30F2D68 /* Pods_Lab5_madinger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab5_madinger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBCDB2120693746008E8CDB /* TripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripsTableViewController.swift; path = ../TripsTableViewController.swift; sourceTree = "<group>"; };
+		3FBCDB2320693942008E8CDB /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
+		3FBCDB2520693FD0008E8CDB /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		6BF25FD5205B382800CAF180 /* Lab5_madinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab5_madinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF25FD8205B382800CAF180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6BF25FDA205B382800CAF180 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF25FDD205B382800CAF180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BF25FDF205B382800CAF180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BF25FE2205B382800CAF180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BF25FE4205B382800CAF180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75BBEE670085C8B4D7CCB7CE /* Pods-Lab5_madinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab5_madinger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lab5_madinger/Pods-Lab5_madinger.debug.xcconfig"; sourceTree = "<group>"; };
+		9135100CF8B2D27E07E5DC4C /* Pods-Lab5_madinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab5_madinger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab5_madinger/Pods-Lab5_madinger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05283FC879C55F1D1954E30F /* Pods_Lab5_madinger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06066AFB8FFEDFBDF4E288A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75BBEE670085C8B4D7CCB7CE /* Pods-Lab5_madinger.debug.xcconfig */,
+				9135100CF8B2D27E07E5DC4C /* Pods-Lab5_madinger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6BF25FCC205B382800CAF180 = {
 			isa = PBXGroup;
 			children = (
 				6BF25FD7205B382800CAF180 /* Lab5_madinger */,
 				6BF25FD6205B382800CAF180 /* Products */,
+				06066AFB8FFEDFBDF4E288A4 /* Pods */,
+				FB9ABD5C159492DB9A019689 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +75,23 @@
 			isa = PBXGroup;
 			children = (
 				6BF25FD8205B382800CAF180 /* AppDelegate.swift */,
-				6BF25FDA205B382800CAF180 /* ViewController.swift */,
+				3FBCDB2120693746008E8CDB /* TripsTableViewController.swift */,
+				3FBCDB2320693942008E8CDB /* Trips.swift */,
+				3FBCDB2520693FD0008E8CDB /* AddTripViewController.swift */,
 				6BF25FDC205B382800CAF180 /* Main.storyboard */,
 				6BF25FDF205B382800CAF180 /* Assets.xcassets */,
 				6BF25FE1205B382800CAF180 /* LaunchScreen.storyboard */,
 				6BF25FE4205B382800CAF180 /* Info.plist */,
 			);
 			path = Lab5_madinger;
+			sourceTree = "<group>";
+		};
+		FB9ABD5C159492DB9A019689 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36834D33BA422875B30F2D68 /* Pods_Lab5_madinger.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BF25FE7205B382800CAF180 /* Build configuration list for PBXNativeTarget "Lab5_madinger" */;
 			buildPhases = (
+				3748D5CAC41881CFA2103D7C /* [CP] Check Pods Manifest.lock */,
 				6BF25FD1205B382800CAF180 /* Sources */,
 				6BF25FD2205B382800CAF180 /* Frameworks */,
 				6BF25FD3205B382800CAF180 /* Resources */,
+				C91F2BEE8CA1451FBF9AF1DA /* [CP] Embed Pods Frameworks */,
+				85114522C44F6CA64CAC679A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +164,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3748D5CAC41881CFA2103D7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lab5_madinger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85114522C44F6CA64CAC679A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab5_madinger/Pods-Lab5_madinger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C91F2BEE8CA1451FBF9AF1DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lab5_madinger/Pods-Lab5_madinger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab5_madinger/Pods-Lab5_madinger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6BF25FD1205B382800CAF180 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF25FDB205B382800CAF180 /* ViewController.swift in Sources */,
+				3FBCDB2220693746008E8CDB /* TripsTableViewController.swift in Sources */,
+				3FBCDB2620693FD0008E8CDB /* AddTripViewController.swift in Sources */,
 				6BF25FD9205B382800CAF180 /* AppDelegate.swift in Sources */,
+				3FBCDB2420693942008E8CDB /* Trips.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +363,7 @@
 		};
 		6BF25FE8205B382800CAF180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75BBEE670085C8B4D7CCB7CE /* Pods-Lab5_madinger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +379,7 @@
 		};
 		6BF25FE9205B382800CAF180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9135100CF8B2D27E07E5DC4C /* Pods-Lab5_madinger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
