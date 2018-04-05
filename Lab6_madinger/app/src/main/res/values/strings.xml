@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Anatomy</string>
     <string name="bodyParts">Body Parts</string>
+    <string name="create_order">Order</string>
     <string-array name="parts">
         <item>Head</item>
         <item>Torso</item>

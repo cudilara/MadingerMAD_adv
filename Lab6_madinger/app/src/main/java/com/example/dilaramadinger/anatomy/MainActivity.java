@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends Activity {
 
@@ -26,5 +28,21 @@ public class MainActivity extends Activity {
         };
         ListView listview = (ListView) findViewById(R.id.listView);
         listview.setOnItemClickListener(itemClickListener);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.create_order:
+                Intent intent = new Intent(this, MoreInfoActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
