@@ -24,6 +24,12 @@ public class BodyCategoryActivity extends ListActivity {
             case "Head":
                 listAdapter = new ArrayAdapter<BodyPart>(this, android.R.layout.simple_list_item_1, BodyPart.head);
                 break;
+            case "Torso":
+                listAdapter = new ArrayAdapter<BodyPart>(this, android.R.layout.simple_list_item_1, BodyPart.torso);
+                break;
+            case "Extremities":
+                listAdapter = new ArrayAdapter<BodyPart>(this, android.R.layout.simple_list_item_1, BodyPart.extremities);
+                break;
             default:
                 listAdapter = new ArrayAdapter<BodyPart>(this, android.R.layout.simple_list_item_1, BodyPart.head);
         }
@@ -33,6 +39,7 @@ public class BodyCategoryActivity extends ListActivity {
     @Override
     public void onListItemClick(ListView listView, View view, int position, long id){
         Intent intent = new Intent(BodyCategoryActivity.this, BodyActivity.class);
+//        String parttype = (String) listView.getItemAtPosition(position);
         intent.putExtra("partid", (int)id);
         startActivity(intent);
     }

@@ -16,9 +16,26 @@ public class BodyActivity extends Activity {
         setContentView(R.layout.activity_body);
 
         int bodynum = (Integer)getIntent().getExtras().get("partid");
+        String bodyPart = (String)getIntent().getExtras().get("partname");
         BodyPart part = BodyPart.head[bodynum];
+        if(bodyPart != null){
+            switch(bodyPart){
+                case "Head":
+                    part = BodyPart.head[bodynum];
+                    break;
+                case "Torso":
+                    part = BodyPart.torso[bodynum];
+                    break;
+                case "Extremities":
+                    part = BodyPart.extremities[bodynum];
+                    break;
+                default:
+                    part = BodyPart.head[bodynum];
+            }
+        }
         ImageView partImage = (ImageView)findViewById(R.id.bodyImageView);
         partImage.setImageResource(part.getImageResourceID());
+
         TextView partName = (TextView)findViewById(R.id.part_name);
         partName.setText(part.getName());
     }
