@@ -21,3 +21,5 @@ I will also need to have functionalities to record, play back, recommend Pow Wow
 - Where will you get any content needed for your app? This could include text, formulas, whatever your app requires.
 
 For content I will use the materials that our family accumulated, online resources for native nations. 
+
+- Images are in the same folder. Note: the bottom bar buttons are not right. The images will be different.
