@@ -1,6 +1,7 @@
 package com.example.dilaramadinger.space;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -55,7 +56,7 @@ public class SpaceListFragment  extends Fragment implements AdapterView.OnItemCl
     //create listener
     private SpaceListListener listener;
 
-    @Override public void onAttach(Context context){
+    @Override public void onAttach(Activity context){
         super.onAttach(context);
         //attaches the context to the listener
         listener = (SpaceListListener) context;
