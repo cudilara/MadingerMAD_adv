@@ -1,11 +1,13 @@
 package com.example.dilaramadinger.space;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -13,7 +15,7 @@ import android.widget.ListView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SpaceListFragment extends Fragment {
+public class SpaceListFragment  extends Fragment implements AdapterView.OnItemClickListener{
 
 
     public SpaceListFragment() {
@@ -41,7 +43,28 @@ public class SpaceListFragment extends Fragment {
             //set the array adapter on the list view
             listCategory.setAdapter(listAdapter);
             //attach the listener to the listview
-//            listCategory.setOnItemClickListener(this);
+            listCategory.setOnItemClickListener(this);
+        }
+    }
+
+    //create interface
+    interface SpaceListListener {
+        void itemClicked(long id);
+    }
+
+    //create listener
+    private SpaceListListener listener;
+
+    @Override public void onAttach(Context context){
+        super.onAttach(context);
+        //attaches the context to the listener
+        listener = (SpaceListListener) context;
+    }
+
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+        if (listener != null){
+            //tells the listener an item was clicked
+            listener.itemClicked(id);
         }
     }
 

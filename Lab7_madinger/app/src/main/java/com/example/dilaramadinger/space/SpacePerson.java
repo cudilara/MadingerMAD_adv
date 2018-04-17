@@ -13,7 +13,7 @@ public class SpacePerson {
     }
 
     public static final SpacePerson[] spacepeople = {
-            new SpacePerson("Austronauts", new ArrayList<String>(Arrays.asList("Name", "Another Name"))),
+            new SpacePerson("Astronauts", new ArrayList<String>(Arrays.asList("Name", "Another Name"))),
             new SpacePerson("Cosmonauts", new ArrayList<String>(Arrays.asList("Imya", "Drugoe Imya")))
     };
 
