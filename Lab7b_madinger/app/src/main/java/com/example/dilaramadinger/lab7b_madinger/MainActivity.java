@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                layout.addView(detailEditText);
 
                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-               dialog.setTitle("Edit Item");
+               dialog.setTitle("Edit Task");
                dialog.setView(layout);
                dialog.setPositiveButton("Save", new DialogInterface.OnClickListener() {
                    @Override
@@ -91,15 +91,15 @@ public class MainActivity extends AppCompatActivity {
 
                 // creates edit texts and adds to layout
                 final EditText itemEditText = new EditText(MainActivity.this);
-                itemEditText.setHint("Item name");
+                itemEditText.setHint("Task");
                 layout.addView(itemEditText);
                 final EditText detailEditText = new EditText(MainActivity.this);
-                detailEditText.setHint("Add item detail");
+                detailEditText.setHint("Notes about this task");
                 layout.addView(detailEditText);
 
                 //create alert dialog
                 AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                dialog.setTitle("Add Item");
+                dialog.setTitle("Add Task");
                 dialog.setView(layout);
                 dialog.setPositiveButton("Save", new DialogInterface.OnClickListener() {
                     @Override
@@ -181,9 +181,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
