@@ -26,15 +26,33 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.philosophy_nav:
+                    mTextMessage.setText("philosophy");
+                    // Listview with existing phrases
+                    // Floating button or button on top to add a quote
+                    // Screen or pop up to add or edit quote
+                    // Add realm to make persistent
                     return true;
                 case R.id.language_nav:
+                    // DO THIS SECTION THIRD
+                    // Make buttons with each leading to another a activity for that language
+                    // Each language activity has a listview and the way to add another phrase
+                    // reuse code from philosophy to manage language lists
+                    // add realm
                     mTextMessage.setText("language");
                     return true;
                 case R.id.record_nav:
+                    // DO THIS SECTION LAST
                     mTextMessage.setText("record");
+                    // button to record speech
+                    // button to record video
+                    // store recordings in realm
+                    // button leading to listview with recorded stuff
                     return true;
                 case R.id.pow_wow_nav:
                     mTextMessage.setText("Pow wow");
+                    // listview with PowWow locations
+                    // each item leads to more info -> website for that pow wow
+                    // button leading to PowWow ettiquette
                     return true;
             }
             return false;
