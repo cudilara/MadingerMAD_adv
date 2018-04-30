@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/philosophy_nav"
+        android:icon="@drawable/dream_catcher"
+        android:title="@string/philosphy" />
+
+    <item
+        android:id="@+id/language_nav"
+        android:icon="@drawable/dialog"
+        android:title="@string/language" />
+
+    <item
+        android:id="@+id/record_nav"
+        android:icon="@drawable/microphone"
+        android:title="@string/record" />
+
+    <item
+        android:id="@+id/pow_wow_nav"
+        android:icon="@drawable/drum"
+        android:title="@string/pow_wow" />
+
+</menu>
