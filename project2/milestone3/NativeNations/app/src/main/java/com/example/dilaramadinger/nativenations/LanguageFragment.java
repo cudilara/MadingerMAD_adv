@@ -6,7 +6,9 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 
 /**
@@ -32,13 +34,11 @@ public class LanguageFragment extends Fragment {
         super.onStart();
         View view = getView();
         if (view != null){
-            Button myButton = (Button) view.findViewById(R.id.languageButton);
-            myButton.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    // Code here executes on main thread after user presses button
-                }
-            });
+            ListView listLocation = (ListView) view.findViewById(R.id.languageListView);
 
+            ArrayAdapter<Language> listAdapter = new ArrayAdapter<Language>(getActivity(), android.R.layout.simple_list_item_1, Language.langList);
+            //set the array adapter on the list view
+            listLocation.setAdapter(listAdapter);
         }
     }
 
