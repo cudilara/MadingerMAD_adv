@@ -20,7 +20,9 @@
         android:layout_height="match_parent"
         android:name="com.example.dilaramadinger.nativenations.PowWowFragment"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout="@layout/fragment_pow_wow" />
+        tools:layout="@layout/fragment_pow_wow" >
+
+    </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

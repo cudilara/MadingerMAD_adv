@@ -8,19 +8,18 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import io.realm.OrderedRealmCollection;
-import io.realm.Realm;
 import io.realm.RealmBaseAdapter;
 
 public class PhilAdapter extends RealmBaseAdapter<PhilosophyQuote> implements ListAdapter {
-    private MainActivity mainActivity;
+    private PhilosophyFragment myFrag;
 
     private static class ViewHolder {
         TextView quoteTxt;
     }
 
-    PhilAdapter(MainActivity activity, OrderedRealmCollection<PhilosophyQuote> data){
+    PhilAdapter(PhilosophyFragment activity, OrderedRealmCollection<PhilosophyQuote> data){
         super(data);
-        this.mainActivity = activity;
+        this.myFrag = activity;
     }
 
     @Override
@@ -37,7 +36,7 @@ public class PhilAdapter extends RealmBaseAdapter<PhilosophyQuote> implements Li
         }
         if(adapterData != null) {
             PhilosophyQuote model = adapterData.get(position);
-            viewHolder.quoteTxt.setText(model.getActivity_name());
+            viewHolder.quoteTxt.setText(model.getQuote());
         }
         return convertView;
     }

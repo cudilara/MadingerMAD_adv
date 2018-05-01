@@ -13,12 +13,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    // TODO: set initial image
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -85,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        PhilosophyFragment philFrag = new PhilosophyFragment();
+        FragmentTransaction philFragTrans = getFragmentManager().beginTransaction();
+        philFragTrans.replace(R.id.myfrag, philFrag);
+        philFragTrans.commit();
+
     }
 
 }

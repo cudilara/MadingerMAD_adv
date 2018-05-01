@@ -34,6 +34,8 @@ public class LanguageFragment extends Fragment {
         super.onStart();
         View view = getView();
         if (view != null){
+            getActivity().setTitle("Languages");
+
             ListView listLocation = (ListView) view.findViewById(R.id.languageListView);
 
             ArrayAdapter<Language> listAdapter = new ArrayAdapter<Language>(getActivity(), android.R.layout.simple_list_item_1, Language.langList);
