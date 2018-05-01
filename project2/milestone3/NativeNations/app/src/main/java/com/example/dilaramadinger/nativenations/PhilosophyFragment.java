@@ -52,7 +52,7 @@ public class PhilosophyFragment extends Fragment {
 //            philosophyQuotes.setAdapter(listAdapter);
 
             getActivity().setTitle("Wisdom Quotes");
-
+//            Realm.deleteRealm(Realm.getDefaultConfiguration()); // This is to clean data!
             realm = Realm.getDefaultInstance();
             RealmResults<PhilosophyQuote> quotes = realm.where(PhilosophyQuote.class).findAll();
             final PhilAdapter adapter = new PhilAdapter(this, quotes);
@@ -64,11 +64,15 @@ public class PhilosophyFragment extends Fragment {
                     LinearLayout layout = new LinearLayout(getActivity());
                     layout.setOrientation(LinearLayout.VERTICAL);
                     final PhilosophyQuote quote = (PhilosophyQuote) adapterView.getAdapter().getItem(i);
+//                    final PhilosophyQuote author = (PhilosophyQuote) adapterView.getAdapter().getItem(i);
 
                     //edit texts
                     final EditText quoteEditText = new EditText(getActivity());
+                    final EditText authorEditText = new EditText(getActivity());
                     quoteEditText.setText(quote.getQuote());
+//                    authorEditText.setText(author.getAuthor());
                     layout.addView(quoteEditText);
+//                    layout.addView(authorEditText);
 
                     AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
                     dialog.setTitle("Edit Quote");
@@ -77,8 +81,9 @@ public class PhilosophyFragment extends Fragment {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             final String updatedQuote = quoteEditText.getText().toString();
+//                            final String updatedAuthor = authorEditText.getText().toString();
                             if(!updatedQuote.isEmpty()){
-                                changeQuote(quote.getId(), updatedQuote);
+                                changeQuote(quote.getId(), updatedQuote, "");
                             }
                         }
                     });
@@ -101,8 +106,11 @@ public class PhilosophyFragment extends Fragment {
                     layout.setOrientation(LinearLayout.VERTICAL);
 
                     final EditText quoteEditText = new EditText(getActivity());
+//                    final EditText authorEditText = new EditText(getActivity());
                     quoteEditText.setHint("quote");
+//                    authorEditText.setHint("author");
                     layout.addView(quoteEditText);
+//                    layout.addView(authorEditText);
 
                     AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
                     dialog.setTitle("Add Quote");
@@ -111,12 +119,15 @@ public class PhilosophyFragment extends Fragment {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             final String newQuote = quoteEditText.getText().toString();
+//                            final String newAuthor = authorEditText.getText().toString();
                             if(!newQuote.isEmpty()){
                                 realm.executeTransactionAsync(new Realm.Transaction() {
                                     @Override
                                     public void execute(Realm realm) {
                                         PhilosophyQuote newquote = realm.createObject(PhilosophyQuote.class, UUID.randomUUID().toString());
+//                                        PhilosophyQuote newauthor = realm.createObject(PhilosophyQuote.class, UUID.randomUUID().toString()); //This adds the row.
                                         newquote.setQuote(newQuote);
+//                                        newauthor.setAuthor(newAuthor);
                                     }
                                 });
                             }
@@ -137,12 +148,17 @@ public class PhilosophyFragment extends Fragment {
         realm.close();
     }
 
-    private void changeQuote(final String quoteId, final String quoteText) {
+    private void changeQuote(final String quoteId, final String quoteText, final String author) {
         realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 PhilosophyQuote quote = realm.where(PhilosophyQuote.class).equalTo("id", quoteId).findFirst();
                 quote.setQuote(quoteText);
+
+//                if(!author.isEmpty()){
+//                    PhilosophyQuote Author = realm.where(PhilosophyQuote.class).equalTo("id", quoteId).findFirst();
+//                    Author.setAuthor(author);
+//                }
             }
         });
     }

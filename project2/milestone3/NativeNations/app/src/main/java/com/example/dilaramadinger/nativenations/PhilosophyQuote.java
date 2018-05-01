@@ -1,6 +1,5 @@
 package com.example.dilaramadinger.nativenations;
 
-import io.realm.RealmModel;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
@@ -10,6 +9,15 @@ public class PhilosophyQuote extends RealmObject {
     @PrimaryKey
     private String id;
     private String quote;
+    private String author;
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
     public String getId(){
         return id;
@@ -25,6 +33,10 @@ public class PhilosophyQuote extends RealmObject {
 
     public void setQuote(String quote) {
         this.quote = quote;
+    }
+
+    public String toString(){
+        return this.quote;
     }
 }
 

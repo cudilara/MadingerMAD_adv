@@ -78,7 +78,7 @@ public class RecordFragment extends Fragment {
 
                     if(checkPermission()) {
                         String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "NativeNations_";
-                        AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "NativeNations_" + getDate() + ".3gp";
+                        AudioSavePathInDevice = path + getDate() + ".3gp";
                         Log.d("storage", AudioSavePathInDevice);
 
                         MediaRecorderReady();

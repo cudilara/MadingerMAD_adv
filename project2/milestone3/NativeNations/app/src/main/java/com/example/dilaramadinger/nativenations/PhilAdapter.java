@@ -15,6 +15,7 @@ public class PhilAdapter extends RealmBaseAdapter<PhilosophyQuote> implements Li
 
     private static class ViewHolder {
         TextView quoteTxt;
+//        TextView authorTxt;
     }
 
     PhilAdapter(PhilosophyFragment activity, OrderedRealmCollection<PhilosophyQuote> data){
@@ -30,6 +31,7 @@ public class PhilAdapter extends RealmBaseAdapter<PhilosophyQuote> implements Li
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.phil_one_row, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.quoteTxt = (TextView) convertView.findViewById(R.id.itemTextView);
+//            viewHolder.authorTxt = (TextView) convertView.findViewById(R.id.authorTextView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -37,6 +39,7 @@ public class PhilAdapter extends RealmBaseAdapter<PhilosophyQuote> implements Li
         if(adapterData != null) {
             PhilosophyQuote model = adapterData.get(position);
             viewHolder.quoteTxt.setText(model.getQuote());
+//            viewHolder.authorTxt.setText(model.getAuthor());
         }
         return convertView;
     }
