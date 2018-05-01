@@ -12,6 +12,7 @@ import android.os.Environment;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.Random;
 
 import static android.Manifest.permission.RECORD_AUDIO;
@@ -32,11 +34,12 @@ public class RecordFragment extends Fragment {
     Button buttonStart, buttonStop, buttonPlayLastRecordAudio,
             buttonStopPlayingRecording ;
     String AudioSavePathInDevice = null;
-    MediaRecorder mediaRecorder ;
-    Random random ;
+    MediaRecorder mediaRecorder;
+    Random random;
+    Date myDate = new Date();
     String RandomAudioFileName = "ABCDEFGHIJKLMNOP";
     public static final int RequestPermissionCode = 1;
-    MediaPlayer mediaPlayer ;
+    MediaPlayer mediaPlayer;
 
     public RecordFragment() {
         // Required empty public constructor
@@ -74,10 +77,9 @@ public class RecordFragment extends Fragment {
                 public void onClick(View view) {
 
                     if(checkPermission()) {
-
-                        AudioSavePathInDevice =
-                                Environment.getExternalStorageDirectory().getAbsolutePath() + "/" +
-                                        CreateRandomAudioFileName(5) + "AudioRecording.3gp";
+                        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "NativeNations_";
+                        AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "NativeNations_" + getDate() + ".3gp";
+                        Log.d("storage", AudioSavePathInDevice);
 
                         MediaRecorderReady();
 
@@ -90,6 +92,8 @@ public class RecordFragment extends Fragment {
                         } catch (IOException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
+                        } catch(Exception e) {
+                            Log.e("record", "general exception in record");
                         }
 
                         buttonStart.setEnabled(false);
@@ -160,11 +164,11 @@ public class RecordFragment extends Fragment {
     }
 
     public void MediaRecorderReady(){
-        MediaRecorder myAudioRecorder = new MediaRecorder();
-        myAudioRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        myAudioRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        myAudioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-        myAudioRecorder.setOutputFile(AudioSavePathInDevice);
+        mediaRecorder = new MediaRecorder();
+        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+        mediaRecorder.setOutputFile(AudioSavePathInDevice);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -177,15 +181,16 @@ public class RecordFragment extends Fragment {
                 result1 == PackageManager.PERMISSION_GRANTED;
     }
 
-    public String CreateRandomAudioFileName(int string){
-        StringBuilder stringBuilder = new StringBuilder( string );
-        int i = 0 ;
-        while(i < string ) {
-            stringBuilder.append(RandomAudioFileName.
-                    charAt(random.nextInt(RandomAudioFileName.length())));
-            i++ ;
-        }
-        return stringBuilder.toString();
+    public String getDate(){
+//        StringBuilder stringBuilder = new StringBuilder( string );
+//        int i = 0 ;
+//        while(i < string ) {
+//            stringBuilder.append(RandomAudioFileName.
+//                    charAt(random.nextInt(RandomAudioFileName.length())));
+//            i++ ;
+//        }
+        CharSequence charDate = DateFormat.format("MM-dd-yy_hh-mm-ss", myDate.getTime());
+        return charDate.toString();
     }
 
     private void requestPermission() {
