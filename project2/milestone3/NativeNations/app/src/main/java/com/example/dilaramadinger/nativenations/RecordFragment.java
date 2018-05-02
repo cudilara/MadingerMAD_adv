@@ -1,8 +1,10 @@
 package com.example.dilaramadinger.nativenations;
 
 // Source: https://www.tutorialspoint.com/android/android_audio_capture.htm
+// Woman weaving: https://www.pinterest.com/pin/123426846015800116
 
 import android.content.pm.PackageManager;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Build;
@@ -17,7 +19,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -31,7 +33,7 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
  * A simple {@link Fragment} subclass.
  */
 public class RecordFragment extends Fragment {
-    Button buttonStart, buttonStop, buttonPlayLastRecordAudio,
+    ImageButton buttonStart, buttonStop, buttonPlayLastRecordAudio,
             buttonStopPlayingRecording ;
     String AudioSavePathInDevice = null;
     MediaRecorder mediaRecorder;
@@ -60,10 +62,10 @@ public class RecordFragment extends Fragment {
         if (view != null){
             getActivity().setTitle("Record and Preserve");
 
-            buttonStart = (Button) view.findViewById(R.id.recordButton);
-            buttonStop = (Button) view.findViewById(R.id.stopRecordButton);
-            buttonPlayLastRecordAudio = (Button) view.findViewById(R.id.playButton);
-            buttonStopPlayingRecording = (Button) view.findViewById(R.id.stopPlayButton);
+            buttonStart = (ImageButton) view.findViewById(R.id.recordButton);
+            buttonStop = (ImageButton) view.findViewById(R.id.stopRecordButton);
+            buttonPlayLastRecordAudio = (ImageButton) view.findViewById(R.id.playButton);
+            buttonStopPlayingRecording = (ImageButton) view.findViewById(R.id.stopPlayButton);
 
             buttonStop.setEnabled(false);
             buttonPlayLastRecordAudio.setEnabled(false);

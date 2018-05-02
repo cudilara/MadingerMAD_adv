@@ -4,48 +4,122 @@
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dilaramadinger.nativenations.RecordFragment">
+    android:background="@drawable/gradient_effect_yellow"
+    tools:context="com.example.dilaramadinger.nativenations.RecordFragment"
+    tools:layout_editor_absoluteY="81dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!--<Button-->
+    <!--android:id="@+id/recordButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="270dp"-->
+    <!--android:layout_marginTop="85dp"-->
+    <!--android:text="Record"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/imageButton2"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:layout_constraintVertical_bias="0.183" />-->
 
-    <Button
+    <!--<Button-->
+    <!--android:id="@+id/stopRecordButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="32dp"-->
+    <!--android:text="Stop"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/recordButton" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/playButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="34dp"-->
+    <!--android:text="Play"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/stopRecordButton" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/stopPlayButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="42dp"-->
+    <!--android:text="Stop Play"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/playButton" />-->
+
+    <ImageButton
         android:id="@+id/recordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Record"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/gradient_effect_yellow"
+        android:src="@android:drawable/ic_notification_overlay"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.183" />
+        app:layout_constraintEnd_toStartOf="@+id/stopRecordButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/stopRecordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Stop"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recordButton" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/gradient_effect_yellow"
+        android:src="@android:drawable/picture_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/playButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/recordButton" />
 
-    <Button
+    <ImageButton
         android:id="@+id/playButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:text="Play"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stopRecordButton" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/gradient_effect_yellow"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stopPlayButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/stopRecordButton" />
 
-    <Button
+    <ImageButton
         android:id="@+id/stopPlayButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:text="Stop Play"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/gradient_effect_yellow"
+        android:src="@android:drawable/picture_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/playButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="392dp"
+        android:layout_height="293dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/loom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="303dp"
+        android:layout_height="67dp"
+        android:textAlignment="center"
+        android:text="Working on displaying your recordings.\nFor now you can find them in\n Settings -> Storage -> Other."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
 </android.support.constraint.ConstraintLayout>
