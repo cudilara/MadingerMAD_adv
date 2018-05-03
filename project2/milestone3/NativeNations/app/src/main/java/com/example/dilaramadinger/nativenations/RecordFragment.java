@@ -4,7 +4,6 @@ package com.example.dilaramadinger.nativenations;
 // Woman weaving: https://www.pinterest.com/pin/123426846015800116
 
 import android.content.pm.PackageManager;
-import android.media.Image;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Build;
@@ -19,10 +18,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
@@ -42,6 +46,7 @@ public class RecordFragment extends Fragment {
     String RandomAudioFileName = "ABCDEFGHIJKLMNOP";
     public static final int RequestPermissionCode = 1;
     MediaPlayer mediaPlayer;
+    String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "NativeNations_";
 
     public RecordFragment() {
         // Required empty public constructor
@@ -79,7 +84,6 @@ public class RecordFragment extends Fragment {
                 public void onClick(View view) {
 
                     if(checkPermission()) {
-                        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "NativeNations_";
                         AudioSavePathInDevice = path + getDate() + ".3gp";
                         Log.d("storage", AudioSavePathInDevice);
 
@@ -162,6 +166,39 @@ public class RecordFragment extends Fragment {
                     }
                 }
             });
+
+            ListView recordList = (ListView) view.findViewById(R.id.recordList);
+            final ArrayList<String> myFile = getFile();
+
+            ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, myFile);
+            recordList.setAdapter(listAdapter);
+
+            recordList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    String source = myFile.get(position);
+                    source = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + source;
+
+                    buttonStop.setEnabled(false);
+                    buttonStart.setEnabled(false);
+                    buttonStopPlayingRecording.setEnabled(true);
+
+                    mediaPlayer = new MediaPlayer();
+                    try {
+                        mediaPlayer.setDataSource(source);
+                        mediaPlayer.prepare();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    mediaPlayer.start();
+                    Toast.makeText(getActivity(), "Recording Playing",
+                            Toast.LENGTH_LONG).show();
+
+
+                }
+            });
         }
     }
 
@@ -184,13 +221,6 @@ public class RecordFragment extends Fragment {
     }
 
     public String getDate(){
-//        StringBuilder stringBuilder = new StringBuilder( string );
-//        int i = 0 ;
-//        while(i < string ) {
-//            stringBuilder.append(RandomAudioFileName.
-//                    charAt(random.nextInt(RandomAudioFileName.length())));
-//            i++ ;
-//        }
         CharSequence charDate = DateFormat.format("MM-dd-yy_hh-mm-ss", myDate.getTime());
         return charDate.toString();
     }
@@ -198,5 +228,21 @@ public class RecordFragment extends Fragment {
     private void requestPermission() {
         ActivityCompat.requestPermissions(getActivity(), new
                 String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, RequestPermissionCode);
+    }
+
+    private ArrayList<String> getFile() {
+        File path = Environment.getExternalStorageDirectory();
+        File[] files = path.listFiles();
+        ArrayList<String> ret = new ArrayList<>();
+        File f;
+        String name;
+        for(int i = 0; i < files.length; ++i){
+           f = files[i];
+           name = f.getName();
+           if(name.matches("NativeNations_.*")){
+               ret.add(name);
+           }
+        }
+        return ret;
     }
 }

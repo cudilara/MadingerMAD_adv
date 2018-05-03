@@ -4,17 +4,30 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dilaramadinger.nativenations.PhilosophyFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    android:background="@drawable/gradient_effect_orange"
+    tools:context="com.example.dilaramadinger.nativenations.PhilosophyFragment"
+    tools:layout_editor_absoluteY="81dp">
 
     <ListView
         android:id="@+id/PhilosophyList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_effect_orange"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="59dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/PhilosophyList"
+        app:layout_constraintTop_toBottomOf="@+id/PhilosophyList" />
 
 </android.support.constraint.ConstraintLayout>
