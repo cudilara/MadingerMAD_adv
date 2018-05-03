@@ -4,6 +4,7 @@ package com.example.dilaramadinger.nativenations;
 // Woman weaving: https://www.pinterest.com/pin/123426846015800116
 
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Build;
@@ -201,6 +202,12 @@ public class RecordFragment extends Fragment {
             });
         }
     }
+
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//
+//        super.onConfigurationChanged(newConfig);
+//    }
 
     public void MediaRecorderReady(){
         mediaRecorder = new MediaRecorder();
