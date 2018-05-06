@@ -18,6 +18,8 @@ public class ResultsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
+        String title = extras.getString("category");
+
         String number = extras.getString("number");
 
         for(int i = 0; i < Integer.parseInt(number); i++){
@@ -27,5 +29,8 @@ public class ResultsActivity extends AppCompatActivity {
 
         TextView myText = (TextView)findViewById(R.id.textView);
         myText.setText(toDisplay);
+
+        TextView myTitle = (TextView)findViewById(R.id.title);
+        myTitle.setText(title);
     }
 }
