@@ -9,8 +9,17 @@ public class ModelClass extends RealmObject {
     @Required
     @PrimaryKey
     private String id;
+    private String exercise_type;
     private String activity_name;
     private String activity_url;
+
+    public String getExercise_type() {
+        return exercise_type;
+    }
+
+    public void setExercise_type(String exercise_type) {
+        this.exercise_type = exercise_type;
+    }
 
     public String getId(){
         return id;

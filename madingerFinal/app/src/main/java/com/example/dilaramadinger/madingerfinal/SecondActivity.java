@@ -1,6 +1,8 @@
 package com.example.dilaramadinger.madingerfinal;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -27,14 +29,43 @@ public class SecondActivity extends AppCompatActivity {
 
         Realm.init(getApplicationContext());
 
+//        Realm.deleteRealm(Realm.getDefaultConfiguration());
         realm = Realm.getDefaultInstance();
+
+        // save category of exercise
+        Intent intent = getIntent();
+        final String category = intent.getStringExtra("exerciseType");
+
+//        RealmResults<ModelClass> cat = realm.where(ModelClass.class).equalTo("exercise_type", category).findAll();
+
         RealmResults<ModelClass> items = realm.where(ModelClass.class).findAll();
         final ItemAdapter adapter = new ItemAdapter(this, items);
         ListView listView = (ListView) findViewById(R.id.secondActivityListView);
         listView.setAdapter(adapter);
+
+
+//        realm.executeTransactionAsync(new Realm.Transaction() {
+//            @Override
+//            public void execute(Realm realm) {
+//                ModelClass newItem = realm.createObject(ModelClass.class, UUID.randomUUID().toString());
+//                newItem.setExercise_type(category);
+//            }
+//        });
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                final ModelClass item = (ModelClass) adapterView.getAdapter().getItem(i);
+                Uri uri = Uri.parse(item.getActivity_detail());
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 LinearLayout layout = new LinearLayout(SecondActivity.this);
                 layout.setOrientation(LinearLayout.VERTICAL);
 
@@ -69,8 +100,10 @@ public class SecondActivity extends AppCompatActivity {
                 });
                 dialog.create();
                 dialog.show();
+                return false;
             }
         });
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
